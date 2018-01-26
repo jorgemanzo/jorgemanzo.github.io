@@ -22,7 +22,7 @@ function convertInput() {
 }
 
 function fromDecimal(userInput) {
-    toBinary(userInput);
+    //toBinary(userInput);
 
     toHex(userInput);
 }
