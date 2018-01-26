@@ -61,6 +61,7 @@ function toHex(userInput) {
       else {
         hex.unshift(temp);
       }
+      dividend = Math.floor(dividend/16); //Assigning the dividend to be the quotient to be used later
     }
     console.log(hex.join());
 }
