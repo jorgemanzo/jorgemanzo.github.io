@@ -32,12 +32,12 @@ function  toBinary(userInput) {
     var temp;
     var decimal = [];
     atoi = parseInt(userInput);
-    for(i = 0; atoi != 0; i++){
+    for(i = 0; atoi != 16; i++){
       temp = atoi % 2; //Find remainder
       decimal.unshift(temp); //Append remainder to array
       atoi = Math.floor(atoi/2); //Assigning the dividend to be the quotient to be used later
     }
-    console.log(decimal);
+    console.log(decimal.toString());
 }
 
 
