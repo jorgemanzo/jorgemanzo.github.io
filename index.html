@@ -3,6 +3,8 @@
 
   <head>
 
+     <script src="script.js"></script>
+
     <meta charset="utf-8">
 
 
@@ -28,13 +30,25 @@
       Decimal to Hex, Binary, and more!
     </h3>
     <p>
-      A number converter because I hate doing this manually
+      A number converter because I hate doing this manually.<br>
     </p>
+
+    <h3>
+      Please select your input type.
+    </h3>
+
+
 
     <form>
      <input type="radio" name="datatype" value="Decimal" checked> Decimal<br>
      <input type="radio" name="datatype" value="Hexadecimal"> Hexadecimal<br>
      <input type="radio" name="datatype" value="Binary"> Binary
+    </form>
+
+    <form>
+      Your number to convert:<br>
+      <input type="text" name="input"><br>
+      <input id="clickMe" type="button" value="Submit" onclick="convertInput();" />
     </form>
 
   </body>
