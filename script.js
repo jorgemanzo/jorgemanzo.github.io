@@ -9,7 +9,7 @@ function convertInput() {
     if(isValid) {
       if(document.getElementById("dec").checked){
         console.log("You checked decimal yes?");
-        toBinary(userInput);
+        fromDecimal(userInput);
       }
       else if(document.getElementById("hex").checked){
         console.log("You checked Hexadecimal yes?");
@@ -22,7 +22,7 @@ function convertInput() {
 }
 
 function fromDecimal(userInput) {
-    //toBinary(userInput);
+    toBinary(userInput);
 
     toHex(userInput);
 }
