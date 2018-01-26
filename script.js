@@ -73,7 +73,7 @@ function  toBinary(userInput) {
     for(i = 0; dividend != 0; i++){
       temp = dividend % 2; //Find remainder
       decimal.unshift(temp); //Append remainder to array
-      dividend = Math.floor(atoi/2); //Assigning the dividend to be the quotient to be used later
+      dividend = Math.floor(dividend/2); //Assigning the dividend to be the quotient to be used later
     }
     console.log(decimal.join());
 }
