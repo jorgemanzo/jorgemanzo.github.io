@@ -24,20 +24,58 @@ function convertInput() {
 function fromDecimal(userInput) {
     toBinary(userInput);
 
-    //convert to hex
+    toHex(userInput);
+}
+
+function toHex(userInput) {
+    var dividend;
+    var temp;
+    var hex = [];
+    dividend = parseInt(userInput);
+    for(i = 0; dividend != 0; i++){
+      temp = dividend % 16;
+      if(temp == 10){
+        hex.unshift('A');
+      }
+
+      else if(temp == 11) {
+        hex.unshift('B');
+      }
+
+      else if(temp == 12) {
+        hex.unshift('C');
+      }
+
+      else if(temp == 13) {
+        hex.unshift('D');
+      }
+
+      else if(temp == 14) {
+        hex.unshift('E');
+      }
+
+      else if(temp == 15) {
+        hex.unshift('F');
+      }
+
+      else {
+        hex.unshift(temp);
+      }
+    }
+    console.log(hex.join());
 }
 
 function  toBinary(userInput) {
-    var atoi;
+    var dividend;
     var temp;
     var decimal = [];
-    atoi = parseInt(userInput);
-    for(i = 0; atoi != 0; i++){
-      temp = atoi % 2; //Find remainder
+    dividend = parseInt(userInput);
+    for(i = 0; dividend != 0; i++){
+      temp = dividend % 2; //Find remainder
       decimal.unshift(temp); //Append remainder to array
-      atoi = Math.floor(atoi/2); //Assigning the dividend to be the quotient to be used later
+      dividend = Math.floor(atoi/2); //Assigning the dividend to be the quotient to be used later
     }
-    console.log(decimal.toString());
+    console.log(decimal.join());
 }
 
 
