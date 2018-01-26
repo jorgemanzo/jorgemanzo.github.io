@@ -1,7 +1,7 @@
 var userInput;
 
 function convertInput() {
-    userInput = document.forms["input"]["fname"].value;
+    userInput = document.getElementsByName("input").value;
     if (userInput == "") {
         alert("Please give input!");
         return false;
