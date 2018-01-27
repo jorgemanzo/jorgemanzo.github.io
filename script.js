@@ -38,7 +38,7 @@ function fromDecimal(userInput, indicator) {
 function  fromHexadecimal(userInput, indicator) {
     toBinary(userInput, indicator);
 
-    toDecimal(userInput, indicator);
+    //toDecimal(userInput, indicator);
 
 }
 
