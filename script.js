@@ -104,7 +104,7 @@ function  toBinary(userInput, indicator) {
 
     //if input is of type hexadecimal
     else if(indicator == 2){
-      console.log(userInput[0].value);
+      console.log(String(userInput));
     }
 }
 
