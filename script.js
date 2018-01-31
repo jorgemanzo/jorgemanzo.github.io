@@ -81,7 +81,7 @@ function toHex(userInput, indicator) {
         }
         dividend = Math.floor(dividend/16); //Assigning the dividend to be the quotient to be used later
       }
-      console.log(hex.join(""));
+      alert(hex.join(""));
     }
 }
 
@@ -98,7 +98,7 @@ function  toBinary(userInput, indicator) {
         decimal.unshift(temp); //Append remainder to array
         dividend = Math.floor(dividend/2); //Assigning the dividend to be the quotient to be used later
       }
-      console.log(decimal.join(""));
+      alert(decimal.join(""));
     }
 
 
