@@ -12,7 +12,7 @@ function convertInput() {
     isValid = checkInput(userInput);
     if(isValid) {
       if(document.getElementById("dec").checked){
-        console.log("You checked decimal yes?");
+        alert("You checked decimal yes?");
         indicator = indicatorDecimal;
         fromDecimal(userInput, indicator);
       }
