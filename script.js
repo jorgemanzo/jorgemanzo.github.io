@@ -48,7 +48,7 @@ function toHex(userInput, indicator) {
     var hex = [];
 
     //If the input is Decimal, convert it to hex
-    if(indicator == 1){
+    if(indicator == 3){
       dividend = parseInt(userInput);
       for(i = 0; dividend != 0; i++){
         temp = dividend % 16;
@@ -91,7 +91,7 @@ function  toBinary(userInput, indicator) {
     var decimal = [];
 
     //if input is of type decimal
-    if(indicator == 1){
+    if(indicator == 3){
       dividend = parseInt(userInput);
       for(i = 0; dividend != 0; i++){
         temp = dividend % 2; //Find remainder
