@@ -88,7 +88,7 @@ function toHex(userInput, indicator) {
 function  toBinary(userInput, indicator) {
     var dividend;
     var temp;
-    var decimal = 
+    var decimal = []; 
     var binary  = [];
     //if input is of type decimal
     if(indicator == 3){
