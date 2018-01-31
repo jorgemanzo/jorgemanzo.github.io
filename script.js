@@ -12,7 +12,7 @@ function convertInput() {
     isValid = checkInput(userInput);
     if(isValid) {
       if(document.getElementById("dec").checked){
-        alert("You checked decimal yes?");
+        console.log("You checked decimal yes?");
         indicator = indicatorDecimal;
         fromDecimal(userInput, indicator);
       }
@@ -88,8 +88,8 @@ function toHex(userInput, indicator) {
 function  toBinary(userInput, indicator) {
     var dividend;
     var temp;
-    var decimal = [];
-
+    var decimal = 
+    var binary  = [];
     //if input is of type decimal
     if(indicator == 3){
       dividend = parseInt(userInput);
@@ -98,13 +98,21 @@ function  toBinary(userInput, indicator) {
         decimal.unshift(temp); //Append remainder to array
         dividend = Math.floor(dividend/2); //Assigning the dividend to be the quotient to be used later
       }
-      alert(decimal.join(""));
+      console.log(decimal.join(""));
     }
 
 
     //if input is of type hexadecimal
     else if(indicator == 2){
-      console.log(String(userInput));
+        
+    //For every char in the user input
+        for(i = 0; i < userInput.length; i++){ 
+          //Convert each char to its binary representation and append to a new string
+          if(userInput[i] == '1'){
+            binary.unshift("0001");
+          }
+	}
+        console.log(binary.join(""));
     }
 }
 
