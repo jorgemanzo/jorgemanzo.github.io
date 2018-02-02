@@ -4,8 +4,8 @@ function convertInput() {
     const   indicatorBinary = 1;
     const   indicatorHexadecimal = 2;
     const   indicatorDecimal = 3;
-    var   isValid;
-    var   indicator; //Used to earmark the data for whether it is dec,hex,or bi
+    var     isValid;
+    var     indicator; //Used to earmark the data for whether it is dec,hex,or bi
 
 
     console.log("convertInput() was called at least!")
@@ -32,7 +32,7 @@ function convertInput() {
 function fromDecimal(USERINPUT, indicator) {
     toBinary(USERINPUT, indicator);
 
-    toHex(USERINPUT, indicator);
+    toHex(USERINPUT, indicator)
 }
 
 function  fromHexadecimal(USERINPUT, indicator) {
@@ -108,7 +108,7 @@ function  toBinary(USERINPUT, indicator) {
     //For every char in the user input
         for(i = 0; i < USERINPUT.length; i++){
           //Convert each char to its binary representation and append to a new string
-          if(USERINPUT[i] == '1'){
+          if(USERINPUT[0][i] == '1'){
             binary.unshift("0001");
           }
 	}
