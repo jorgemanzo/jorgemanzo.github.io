@@ -1,25 +1,25 @@
 
 function convertInput() {
-    var userInput;
-    var isValid;
-    var indicator; //Used to earmark the data for whether it is dec,hex,or bi
-    var indicatorBinary = 1;
-    var indicatorHexadecimal = 2;
-    var indicatorDecimal = 3;
+    const   USERINPUT = document.getElementsByName("input")[0].value;
+    const   indicatorBinary = 1;
+    const   indicatorHexadecimal = 2;
+    const   indicatorDecimal = 3;
+    var   isValid;
+    var   indicator; //Used to earmark the data for whether it is dec,hex,or bi
 
-    userInput = document.getElementsByName("input")[0].value;
+
     console.log("convertInput() was called at least!")
-    isValid = checkInput(userInput);
+    isValid = checkInput(USERINPUT);
     if(isValid) {
       if(document.getElementById("dec").checked){
         console.log("You checked decimal yes?");
         indicator = indicatorDecimal;
-        fromDecimal(userInput, indicator);
+        fromDecimal(USERINPUT, indicator);
       }
       else if(document.getElementById("hex").checked){
         console.log("You checked Hexadecimal yes?");
         indicator = indicatorHexadecimal;
-        fromHexadecimal(userInput);
+        fromHexadecimal(USERINPUT, indicator);
       }
       else if(document.getElementById("bi").checked){
         console.log("You checked binary yes?");
@@ -29,27 +29,27 @@ function convertInput() {
     }
 }
 
-function fromDecimal(userInput, indicator) {
-    toBinary(userInput, indicator);
+function fromDecimal(USERINPUT, indicator) {
+    toBinary(USERINPUT, indicator);
 
-    toHex(userInput, indicator);
+    toHex(USERINPUT, indicator);
 }
 
-function  fromHexadecimal(userInput, indicator) {
-    toBinary(userInput, indicator);
+function  fromHexadecimal(USERINPUT, indicator) {
+    toBinary(USERINPUT, indicator);
 
     //toDecimal(userInput, indicator);
 
 }
 
-function toHex(userInput, indicator) {
+function toHex(USERINPUT, indicator) {
     var dividend;
     var temp;
     var hex = [];
 
     //If the input is Decimal, convert it to hex
     if(indicator == 3){
-      dividend = parseInt(userInput);
+      dividend = parseInt(USERINPUT);
       for(i = 0; dividend != 0; i++){
         temp = dividend % 16;
         if(temp == 10){
@@ -85,14 +85,14 @@ function toHex(userInput, indicator) {
     }
 }
 
-function  toBinary(userInput, indicator) {
+function  toBinary(USERINPUT, indicator) {
     var dividend;
     var temp;
-    var decimal = []; 
+    var decimal = [];
     var binary  = [];
     //if input is of type decimal
     if(indicator == 3){
-      dividend = parseInt(userInput);
+      dividend = parseInt(USERINPUT);
       for(i = 0; dividend != 0; i++){
         temp = dividend % 2; //Find remainder
         decimal.unshift(temp); //Append remainder to array
@@ -104,11 +104,11 @@ function  toBinary(userInput, indicator) {
 
     //if input is of type hexadecimal
     else if(indicator == 2){
-        
+
     //For every char in the user input
-        for(i = 0; i < userInput.length; i++){ 
+        for(i = 0; i < USERINPUT.length; i++){
           //Convert each char to its binary representation and append to a new string
-          if(userInput[i] == '1'){
+          if(USERINPUT[i] == '1'){
             binary.unshift("0001");
           }
 	}
@@ -117,8 +117,8 @@ function  toBinary(userInput, indicator) {
 }
 
 
-function checkInput(userInput) {
-    if (userInput == "") {
+function checkInput(USERINPUT) {
+    if (USERINPUT == "") {
         alert("Please give input!");
         return false;
     }
