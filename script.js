@@ -57,33 +57,33 @@ function  toBinary(n) {
 
 function hexToDec(USERINPUT){
     let n = 0;
-    let j = USERINPUT.toString().length - 1;
+    let length = USERINPUT.toString().length - 1;
     let string = USERINPUT.toString();
-    //For(i elements in userinput in reverse)
-    for(i = j; i >= 0; i--){
+    //For(i elements in userinput, multiply string[i] by 16^j)
+    for(i = 0, j = length; i < length && j >= 0; i++, j--){
       //case a-f = 10-15 which is then multiplied by 16^i
       //else take 1-9 and do the same as above, adding the results
       switch (string[i]) {
         case   "A":
-          n = n + (10 * (Math.pow(16, i)  ) )
+          n = n + (10 * (Math.pow(16, j)  ) )
           break;
         case   "B":
-          n = n + (11 * (Math.pow(16, i)  ) )
+          n = n + (11 * (Math.pow(16, j)  ) )
           break;
         case   "C":
-          n = n + (12 * (Math.pow(16, i)  ) )
+          n = n + (12 * (Math.pow(16, j)  ) )
           break;
         case    "D":
-          n = n + (13 * (Math.pow(16, i)  ) )
+          n = n + (13 * (Math.pow(16, j)  ) )
           break;
         case    "E":
-          n = n + (14 * (Math.pow(16, i)  ) )
+          n = n + (14 * (Math.pow(16, j)  ) )
           break;
         case    "F":
-          n = n + (15 * (Math.pow(16, i)  ) )
+          n = n + (15 * (Math.pow(16, j)  ) )
           break;
         default:
-          n = n + (parseInt(string[i]) * (Math.pow(16, i) ) );
+          n = n + (parseInt(string[i]) * (Math.pow(16, j) ) );
       }
 
     }
