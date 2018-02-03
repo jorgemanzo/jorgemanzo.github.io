@@ -7,36 +7,34 @@ function toHex(n) {
     let temp;
     let hex = [];
     //If the input is Decimal, convert it to hex
-    if(indicator == 3){
-      for(i = 0; n != 0; i++){
-        temp = n % 16;
-        //Assigning the dividend to be the quotient to be used later
-        n = Math.floor(n/16);
-        switch(temp){
-          case 10:
-            hex.unshift('A');
-            break;
-          case 11:
-            hex.unshift('B');
-            break;
-          case 12:
-            hex.unshift('C');
-            break;
-          case 13:
-            hex.unshift('D');
-            break;
-          case 14:
-            hex.unshift('E');
-            break;
-          case 15:
-            hex.unshift('F');
-            break;
-          default:
-            hex.unshift(temp);
-        }
+    for(i = 0; n != 0; i++){
+      temp = n % 16;
+      //Assigning the dividend to be the quotient to be used later
+      n = Math.floor(n/16);
+      switch(temp){
+        case 10:
+          hex.unshift('A');
+          break;
+        case 11:
+          hex.unshift('B');
+          break;
+        case 12:
+          hex.unshift('C');
+          break;
+        case 13:
+          hex.unshift('D');
+          break;
+        case 14:
+          hex.unshift('E');
+          break;
+        case 15:
+          hex.unshift('F');
+          break;
+        default:
+          hex.unshift(temp);
       }
-      console.log(hex.join(""));
     }
+    console.log(hex.join(""));
 }
 
 
