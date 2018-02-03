@@ -105,6 +105,7 @@ function binToDec(USERINPUT){
           break;
       }
     }
+    console.log(n);
     return  n;
 }
 
