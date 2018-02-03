@@ -56,7 +56,36 @@ function  toBinary(n) {
 }
 
 function hexToDec(USERINPUT){
-    let n;
+    let n = 0;
+    //For(i elements in userinput in reverse)
+    for(i = USERINPUT.length; i >= 0; i--){
+      //case a-f = 10-15 which is then multiplied by 16^i
+      //else take 1-9 and do the same as above, adding the results
+      switch (USERINPUT) {
+        case USERINPUT[i] === "A":
+          n = n + (10 * (Math.pow(16, i)  ) )
+          break;
+        case USERINPUT[i] === "B":
+          n = n + (11 * (Math.pow(16, i)  ) )
+          break;
+        case USERINPUT[i] === "C":
+          n = n + (12 * (Math.pow(16, i)  ) )
+          break;
+        case USERINPUT[i] === "D":
+          n = n + (13 * (Math.pow(16, i)  ) )
+          break;
+        case USERINPUT[i] === "E":
+          n = n + (14 * (Math.pow(16, i)  ) )
+          break;
+        case USERINPUT[i] === "F":
+          n = n + (15 * (Math.pow(16, i)  ) )
+          break;
+        default:
+          n = n + (parseInt(USERINPUT[i]) * (Math.pow(16, i) ) );
+      }
+
+    }
+
     return  n;
 }
 
@@ -66,7 +95,7 @@ function binToDec(USERINPUT){
 }
 
 function output(n){
-    toBinary(n)
+    toBinary(n);
     toHex(n);
 }
 
@@ -74,15 +103,15 @@ function output(n){
 function convert(USERINPUT){
     let n;
     if(document.getElementById("hex").checked){
-      n = parseInt(hexToDec(USERINPUT));
+      n = hexToDec(USERINPUT);
     }
     else if(document.getElementById("bin").checked){
-      n = parseInt(binToDec(USERINPUT))
+      n = binToDec(USERINPUT);
     }
     else{
       n = parseInt(USERINPUT);
-      output(n);
     }
+    output(n);
 }
 
 
