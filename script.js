@@ -58,7 +58,7 @@ function  toBinary(n) {
 function hexToDec(USERINPUT){
     let n = 0;
     //For(i elements in userinput in reverse)
-    for(i = USERINPUT.length; i >= 0; i--){
+    for(i = USERINPUT.toString().length; i >= 0; i--){
       //case a-f = 10-15 which is then multiplied by 16^i
       //else take 1-9 and do the same as above, adding the results
       switch (USERINPUT) {
@@ -121,5 +121,6 @@ function convertInput() {
     let  indicator; //Used to earmark the data for whether it is dec,hex,or bi
 
     console.log("convertInput() was called at least!");
+    console.log(USERINPUT.toString().length);
     convert(USERINPUT);
 }
