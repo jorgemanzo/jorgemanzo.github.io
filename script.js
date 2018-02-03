@@ -90,7 +90,7 @@ function binToDec(USERINPUT){
     let n = 0;
     let length = USERINPUT.toString().length - 1;
     let string = USERINPUT.toString();
-    for(i = 0, j = length; i <= length && j >= 0; i++, j--){
+    for(i = 0, j = length; j >= 0; i++, j--){
       switch (string[i]) {
         case "1":
           n = n + (1 * (Math.pow(2, j)  ) )
