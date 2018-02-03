@@ -89,7 +89,7 @@ function hexToDec(USERINPUT){
 function counter(string, length){
   let n = 0 //be the number of periods or spaces in string
   for(i = 0; i < length; i++){
-    if(string[i] === ("." || " ")){n++;}
+    if(string[i] === "." || string[i] === " "){n++;}
   }
   console.log(n);
   return n;
