@@ -61,8 +61,6 @@ function hexToDec(USERINPUT){
     let string = USERINPUT.toString();
     //For(i elements in userinput in reverse)
     for(i = j; i >= 0; i--){
-      console.log(i);
-      console.log(string[i]);
       //case a-f = 10-15 which is then multiplied by 16^i
       //else take 1-9 and do the same as above, adding the results
       switch (string[i]) {
