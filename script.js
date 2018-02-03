@@ -60,7 +60,7 @@ function hexToDec(USERINPUT){
     let length = USERINPUT.toString().length - 1;
     let string = USERINPUT.toString();
     //For(i elements in userinput, multiply string[i] by 16^j)
-    for(i = 0, j = length; i < length && j >= 0; i++, j--){
+    for(i = 0, j = length; i <= length && j >= 0; i++, j--){
       //case a-f = 10-15 which is then multiplied by 16^i
       //else take 1-9 and do the same as above, adding the results
       switch (string[i]) {
@@ -73,13 +73,13 @@ function hexToDec(USERINPUT){
         case   "C":
           n = n + (12 * (Math.pow(16, j)  ) )
           break;
-        case    "D":
+        case   "D":
           n = n + (13 * (Math.pow(16, j)  ) )
           break;
-        case    "E":
+        case   "E":
           n = n + (14 * (Math.pow(16, j)  ) )
           break;
-        case    "F":
+        case   "F":
           n = n + (15 * (Math.pow(16, j)  ) )
           break;
         default:
