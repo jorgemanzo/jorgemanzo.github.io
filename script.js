@@ -57,8 +57,9 @@ function  toBinary(n) {
 
 function hexToDec(USERINPUT){
     let n = 0;
+    let j = USERINPUT.toString().length;
     //For(i elements in userinput in reverse)
-    for(i = USERINPUT.toString().length; i != 0; i--){
+    for(i = j; i != 0; i--){
       //case a-f = 10-15 which is then multiplied by 16^i
       //else take 1-9 and do the same as above, adding the results
       switch (USERINPUT) {
