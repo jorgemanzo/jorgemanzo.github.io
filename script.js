@@ -1,8 +1,5 @@
 
-//toHEX (INPUT)
-/*
-Desc: Converts Decimal to Hexadecimal always and only
-*/
+//convets Decimal input to Hexadecimal output
 function toHex(n) {
     let temp;
     let hex = [];
@@ -38,10 +35,9 @@ function toHex(n) {
 }
 
 
-//toBIN(iNPUT)
-/*
-Desc: Converts Decimal to binary always and only
-*/
+
+
+//Converts Decimal to binary output
 function  toBinary(n) {
     let temp;
     let decimal = [];
@@ -54,7 +50,7 @@ function  toBinary(n) {
     }
     document.getElementById('binOut').innerHTML = decimal.join("");
 }
-
+//Converts Hexadecimal input into Decimal output
 function hexToDec(USERINPUT){
     let n = 0;
     let length = USERINPUT.toString().length - 1;
@@ -89,13 +85,12 @@ function hexToDec(USERINPUT){
     return  n;
 }
 
+//Converts binary input to Decimal output
 function binToDec(USERINPUT){
     let n = 0;
     let length = USERINPUT.toString().length - 1;
     let string = USERINPUT.toString();
     for(i = 0, j = length; i <= length && j >= 0; i++, j--){
-      //case a-f = 10-15 which is then multiplied by 16^i
-      //else take 1-9 and do the same as above, adding the results
       switch (string[i]) {
         case "1":
           n = n + (1 * (Math.pow(2, j)  ) )
