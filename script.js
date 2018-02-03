@@ -85,21 +85,30 @@ function hexToDec(USERINPUT){
     return  n;
 }
 
+//helper function, counts the number of ' ' or '.' in binary input
+function counter(string, length){
+  let n = 0 //be the number of periods or spaces in string
+  for(i = 0; i < length; i++){
+    if(string[i] === ("." || " ")){n++;}
+  }
+  return n;
+}
+
+
 //Converts binary input to Decimal output
 function binToDec(USERINPUT){
     let n = 0;
     let length = USERINPUT.toString().length - 1;
     let string = USERINPUT.toString();
+    length = counter(string, length);
     for(i = 0, j = length; j >= 0; i++, j--){
       switch (string[i]) {
         case "1":
           n = n + (1 * (Math.pow(2, j)  ) )
           break;
         case " ":
-          j = j + 1;
           break;
         case ".":
-          j = j + 1;
           break;
         default:
           break;
