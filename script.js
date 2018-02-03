@@ -134,4 +134,5 @@ function convertInput() {
     let  isValid;
     let  indicator; //Used to earmark the data for whether it is dec,hex,or bi
     convert(USERINPUT);
+    return false;
 }
