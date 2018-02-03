@@ -85,7 +85,8 @@ function hexToDec(USERINPUT){
         default:
           n = n + (parseInt(string[i]) * (Math.pow(16, j) ) );
       }
-
+      console.log("Debug, n is:")
+      console.log(n)
     }
 
     return  n;
