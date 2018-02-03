@@ -58,32 +58,33 @@ function  toBinary(n) {
 function hexToDec(USERINPUT){
     let n = 0;
     let j = USERINPUT.toString().length - 1;
+    let string = USERINPUT.toString();
     //For(i elements in userinput in reverse)
     for(i = j; i >= 0; i--){
       console.log(i);
       //case a-f = 10-15 which is then multiplied by 16^i
       //else take 1-9 and do the same as above, adding the results
-      switch (USERINPUT) {
-        case USERINPUT[i] === "A":
+      switch (string) {
+        case string[i] === "A":
           n = n + (10 * (Math.pow(16, i)  ) )
           break;
-        case USERINPUT[i] === "B":
+        case string[i] === "B":
           n = n + (11 * (Math.pow(16, i)  ) )
           break;
-        case USERINPUT[i] === "C":
+        case string[i] === "C":
           n = n + (12 * (Math.pow(16, i)  ) )
           break;
-        case USERINPUT[i] === "D":
+        case string[i] === "D":
           n = n + (13 * (Math.pow(16, i)  ) )
           break;
-        case USERINPUT[i] === "E":
+        case string[i] === "E":
           n = n + (14 * (Math.pow(16, i)  ) )
           break;
-        case USERINPUT[i] === "F":
+        case string[i] === "F":
           n = n + (15 * (Math.pow(16, i)  ) )
           break;
         default:
-          n = n + (parseInt(USERINPUT[i]) * (Math.pow(16, i) ) );
+          n = n + (parseInt(string[i]) * (Math.pow(16, i) ) );
       }
 
     }
