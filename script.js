@@ -34,7 +34,7 @@ function toHex(n) {
           hex.unshift(temp);
       }
     }
-    console.log(hex.join(""));
+    document.getElementById('hexOut').innerHTML = hex.join("");
 }
 
 
@@ -52,7 +52,7 @@ function  toBinary(n) {
       decimal.unshift(temp); //Append remainder to array
       n = Math.floor(n/2); //Assigning the dividend to be the quotient to be used later
     }
-    console.log(decimal.join(""));
+    document.getElementById('binOut').innerHTML = decimal.join("");
 }
 
 function hexToDec(USERINPUT){
@@ -86,7 +86,6 @@ function hexToDec(USERINPUT){
           n = n + (parseInt(string[i]) * (Math.pow(16, j) ) );
       }
     }
-
     return  n;
 }
 
@@ -105,13 +104,11 @@ function binToDec(USERINPUT){
           break;
       }
     }
-    console.log("Your bin to Dec is:");
-    console.log(n);
     return  n;
 }
 
 function output(n){
-    console.log(n);
+    document.getElementById('decOut').innerHTML = n;
     toBinary(n);
     toHex(n);
 }
