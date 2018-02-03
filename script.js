@@ -97,7 +97,11 @@ function binToDec(USERINPUT){
 }
 
 function output(n){
+    console.log("Your number in Decimal:");
+    console.log(n);
+    console.log("Your number in Binary");
     toBinary(n);
+    console.log("Your number in Hex");
     toHex(n);
 }
 
