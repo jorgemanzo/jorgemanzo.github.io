@@ -64,22 +64,22 @@ function hexToDec(USERINPUT){
       //case a-f = 10-15 which is then multiplied by 16^i
       //else take 1-9 and do the same as above, adding the results
       switch (string[i]) {
-        case   "A":
+        case "A":
           n = n + (10 * (Math.pow(16, j)  ) )
           break;
-        case   "B":
+        case "B":
           n = n + (11 * (Math.pow(16, j)  ) )
           break;
-        case   "C":
+        case "C":
           n = n + (12 * (Math.pow(16, j)  ) )
           break;
-        case   "D":
+        case "D":
           n = n + (13 * (Math.pow(16, j)  ) )
           break;
-        case   "E":
+        case "E":
           n = n + (14 * (Math.pow(16, j)  ) )
           break;
-        case   "F":
+        case "F":
           n = n + (15 * (Math.pow(16, j)  ) )
           break;
         default:
@@ -97,8 +97,14 @@ function binToDec(USERINPUT){
       //case a-f = 10-15 which is then multiplied by 16^i
       //else take 1-9 and do the same as above, adding the results
       switch (string[i]) {
-        case   "1":
+        case "1":
           n = n + (1 * (Math.pow(2, j)  ) )
+          break;
+        case " ":
+          j++;
+          break;
+        case ".":
+          j++;
           break;
         default:
           break;
