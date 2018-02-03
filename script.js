@@ -91,7 +91,7 @@ function hexToDec(USERINPUT){
 }
 
 function binToDec(USERINPUT){
-    let n;
+    let n = 0;
     let length = USERINPUT.toString().length - 1;
     let string = USERINPUT.toString();
     for(i = 0, j = length; i <= length && j >= 0; i++, j--){
