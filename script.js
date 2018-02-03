@@ -85,8 +85,6 @@ function hexToDec(USERINPUT){
         default:
           n = n + (parseInt(string[i]) * (Math.pow(16, j) ) );
       }
-      console.log("Debug, n is:")
-      console.log(n)
     }
 
     return  n;
@@ -94,6 +92,19 @@ function hexToDec(USERINPUT){
 
 function binToDec(USERINPUT){
     let n;
+    let length = USERINPUT.toString().length - 1;
+    let string = USERINPUT.toString();
+    for(i = 0, j = length; i <= length && j >= 0; i++, j--){
+      //case a-f = 10-15 which is then multiplied by 16^i
+      //else take 1-9 and do the same as above, adding the results
+      switch (string[i]) {
+        case   "1":
+          n = n + (1 * (Math.pow(2, j)  ) )
+          break;
+        default:
+          break;
+      }
+    }
     return  n;
 }
 
