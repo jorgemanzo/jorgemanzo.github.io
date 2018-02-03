@@ -62,25 +62,26 @@ function hexToDec(USERINPUT){
     //For(i elements in userinput in reverse)
     for(i = j; i >= 0; i--){
       console.log(i);
+      console.log(string[i]);
       //case a-f = 10-15 which is then multiplied by 16^i
       //else take 1-9 and do the same as above, adding the results
-      switch (string) {
-        case string[i] === "A":
+      switch (string[i]) {
+        case   "A":
           n = n + (10 * (Math.pow(16, i)  ) )
           break;
-        case string[i] === "B":
+        case   "B":
           n = n + (11 * (Math.pow(16, i)  ) )
           break;
-        case string[i] === "C":
+        case   "C":
           n = n + (12 * (Math.pow(16, i)  ) )
           break;
-        case string[i] === "D":
+        case    "D":
           n = n + (13 * (Math.pow(16, i)  ) )
           break;
-        case string[i] === "E":
+        case    "E":
           n = n + (14 * (Math.pow(16, i)  ) )
           break;
-        case string[i] === "F":
+        case    "F":
           n = n + (15 * (Math.pow(16, i)  ) )
           break;
         default:
