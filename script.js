@@ -111,11 +111,8 @@ function binToDec(USERINPUT){
 }
 
 function output(n){
-    console.log("Your number in Decimal:");
     console.log(n);
-    console.log("Your number in Binary");
     toBinary(n);
-    console.log("Your number in Hex");
     toHex(n);
 }
 
@@ -139,8 +136,5 @@ function convertInput() {
     const   USERINPUT = document.getElementById("input").value;
     let  isValid;
     let  indicator; //Used to earmark the data for whether it is dec,hex,or bi
-
-    console.log("convertInput() was called at least!");
-    console.log(USERINPUT.toString().length);
     convert(USERINPUT);
 }
