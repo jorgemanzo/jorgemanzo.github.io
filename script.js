@@ -105,6 +105,8 @@ function binToDec(USERINPUT){
           break;
       }
     }
+    console.log("Your bin to Dec is:");
+    console.log(n);
     return  n;
 }
 
