@@ -91,6 +91,8 @@ function counter(string, length){
   for(i = 0; i < length; i++){
     if(string[i] === ("." || " ")){n++;}
   }
+  console.log("Characters to remove:");
+  console.log("n");
   return n;
 }
 
