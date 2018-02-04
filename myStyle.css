@@ -1,4 +1,9 @@
 #topBar  {
-  background-color: DodgerBlue;
-  position: fixed;
+  background-color: Gray;
+  font-family: Verdana;
+  color: White;
+}
+
+body  {
+
 }
