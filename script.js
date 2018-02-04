@@ -101,11 +101,7 @@ function binToDec(USERINPUT){
     let n = 0;
     let length = USERINPUT.toString().length - 1;
     let string = USERINPUT.toString();
-    let remove = counter(string, length);
-    console.log(length);
-    console.log(remove);
-    length = length - remove;
-    console.log(length);
+    length = length - counter(string, length);
     for(i = 0, j = length; j >= 0; i++, j--){
       switch (string[i]) {
         case "1":
