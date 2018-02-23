@@ -121,7 +121,7 @@ function binToDec(USERINPUT){
 }
 
 function hexToBin(USERINPUT){
-  let n   = []
+  let n   = [];
   let length = USERINPUT.toString().length - 1;
   let string = USERINPUT.toString();
   for(i = 0, j = length; j >= 0; i++, j--){
