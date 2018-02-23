@@ -121,33 +121,35 @@ function binToDec(USERINPUT){
 }
 
 function hexToBin(USERINPUT){
-  let note   = []
+  let n   = []
   let length = USERINPUT.toString().length - 1;
   let string = USERINPUT.toString();
-  switch (string[i]) {
-    case "A":
-      n.unshift(1010); //Append remainder to array
-      break;
-    case "B":
-      n.unshift(1011); //Append remainder to array
-      break;
-    case "C":
-      n.unshift(1100); //Append remainder to array
-      break;
-    case "D":
-      n.unshift(1101); //Append remainder to array
-      break;
-    case "E":
-      n.unshift(1110); //Append remainder to array
-      break;
-    case "F":
-      n.unshift(1010); //Append remainder to array
-      break;
-    default:
-      n.unshift(toBinary(string[i]))
-      break
+  for(i = 0, j = length; j >= 0; i++, j--){
+    switch (string[i]) {
+      case "A":
+        n.unshift(1010); //Append remainder to array
+        break;
+      case "B":
+        n.unshift(1011); //Append remainder to array
+        break;
+      case "C":
+        n.unshift(1100); //Append remainder to array
+        break;
+      case "D":
+        n.unshift(1101); //Append remainder to array
+        break;
+      case "E":
+        n.unshift(1110); //Append remainder to array
+        break;
+      case "F":
+        n.unshift(1010); //Append remainder to array
+        break;
+      default:
+        n.unshift(toBinary(string[i]))
+        break
+    }
+    console.log(n);
   }
-  console.log(n);
 }
 
 function output(n){
