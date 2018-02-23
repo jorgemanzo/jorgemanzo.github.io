@@ -148,6 +148,7 @@ function hexToBin(USERINPUT){
         n.unshift(toBinary(string[i]))
         break
     }
+    n = n.join("");
     console.log(n);
   }
 }
