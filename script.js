@@ -49,6 +49,7 @@ function  toBinary(n) {
       n = Math.floor(n/2); //Assigning the dividend to be the quotient to be used later
     }
     document.getElementById('binOut').innerHTML = decimal.join("");
+    return decimal;
 }
 //Converts Hexadecimal input into Decimal output
 function hexToDec(USERINPUT){
@@ -119,6 +120,36 @@ function binToDec(USERINPUT){
     return  n;
 }
 
+function hexToBin(USERINPUT){
+  let note   = []
+  let length = USERINPUT.toString().length - 1;
+  let string = USERINPUT.toString();
+  switch (string[i]) {
+    case "A":
+      n.unshift(1010); //Append remainder to array
+      break;
+    case "B":
+      n.unshift(1011); //Append remainder to array
+      break;
+    case "C":
+      n.unshift(1100); //Append remainder to array
+      break;
+    case "D":
+      n.unshift(1101); //Append remainder to array
+      break;
+    case "E":
+      n.unshift(1110); //Append remainder to array
+      break;
+    case "F":
+      n.unshift(1010); //Append remainder to array
+      break;
+    default:
+      n.unshift(toBinary(string[i]))
+      break
+  }
+  console.log(n);
+}
+
 function output(n){
     document.getElementById('decOut').innerHTML = n;
     toBinary(n);
@@ -128,16 +159,38 @@ function output(n){
 
 function convert(USERINPUT){
     let n;
+      if(document.getElementById("hex").checked){
+        n = hexToDec(USERINPUT);
+      }
+      else if(document.getElementById("bin").checked){
+        n = binToDec(USERINPUT);
+      }
+      else{
+        n = parseInt(USERINPUT) //Convert user's decimal input into Binary
+      }
+      output(n);
+}
+
+function twosComplement(n){
+
+}
+
+function checkForSpecial(USERINPUT){
+  if(document.getElementById("fromNeg").checked){
+    //convert whatever input type to negative using two's complement
     if(document.getElementById("hex").checked){
-      n = hexToDec(USERINPUT);
+      n = hexToBin(USERINPUT);
     }
-    else if(document.getElementById("bin").checked){
-      n = binToDec(USERINPUT);
+
+    else if(document.getElementById("dec").checked){
+      n = toBinary(USERINPUT);
     }
     else{
-      n = parseInt(USERINPUT);
+      n = USERINGPUT;
     }
-    output(n);
+    //call n = twosComplement(n)
+    //call n  =
+  }
 }
 
 
@@ -145,6 +198,7 @@ function convertInput() {
     const   USERINPUT = document.getElementById("input").value;
     let  isValid;
     let  indicator; //Used to earmark the data for whether it is dec,hex,or bi
+    checkForSpecial(USERINPUT);
     convert(USERINPUT);
     return true;
 }
