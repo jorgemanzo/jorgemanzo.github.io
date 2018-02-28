@@ -205,6 +205,8 @@ function twosComplement(n){
   for(i = length; i > 0; i--){
     carry = 1;
     carry = carry + parseInt(invert[i]);
+    console.log("Carry is:");
+    console.log(carry);
     if(carry === 2){
       invert[i] = '0';
     }
