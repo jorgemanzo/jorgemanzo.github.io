@@ -128,6 +128,7 @@ function hexToBin(USERINPUT){
   let string = USERINPUT.toString();
   let i;
   for(i = 0; i < length; i++){
+    console.log(i);
     console.log(string[i]);
     switch (string[i]) {
       case "A":
