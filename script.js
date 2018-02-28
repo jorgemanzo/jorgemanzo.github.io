@@ -148,8 +148,8 @@ function hexToBin(USERINPUT){
         hex1.unshift(toBinary(string[i]))
         break
     }
-    n = n.join("");
-    console.log(n);
+
+    console.log(hex1.join(""));
   }
 }
 
