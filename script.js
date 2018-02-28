@@ -196,7 +196,7 @@ function twosComplement(n){
         invert.push('0');
     }
   }
-  invert = invert.toString();
+  //invert = invert.toString();
   //addOne
   //place 1 in carry
   //add the last element of invert to carry;
@@ -206,6 +206,8 @@ function twosComplement(n){
     carry = 1 + parseInt(invert[i]);
     console.log("Carry is:");
     console.log(carry);
+    console.log("i in addOne is:");
+    console.log(i);
     if(carry === 2){
       invert[i] = '0';
     }
@@ -215,7 +217,7 @@ function twosComplement(n){
     }
   }
   console.log("Your number in Binary two's complement:");
-  console.log(invert);
+  console.log(invert.join(""));
 }
 
 function checkForSpecial(USERINPUT){
