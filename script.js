@@ -176,7 +176,7 @@ function convert(USERINPUT){
         n = binToDec(USERINPUT);
       }
       else{
-        n = parseInt(USERINPUT) //Convert user's decimal input into Binary
+        n = parseInt(USERINPUT); //Convert user's decimal input into Binary
       }
       output(n);
 }
@@ -186,13 +186,13 @@ function twosComplement(n){
   let length = n.toString().length;
   let string = n.toString();
   let i;
-  for(i = 0, i < length; i++){
+  for(i = 0; i < length; i++){
     switch (string[i]) {
       case "0":
-        invert.unshift('1'); //Append remainder to array
+        invert.push('1'); //Append remainder to array
         break;
       default:
-        invert.unshift('0');
+        invert.push('0');
     }
   }
   console.log("Your number inverted:");
