@@ -176,6 +176,9 @@ function hexToBin(USERINPUT){
       case "8":
         hex1.push('1000');
         break;
+      case "9":
+        hex1.push('1001');
+        break;
     }
   }
   console.log(hex1.join(""));
