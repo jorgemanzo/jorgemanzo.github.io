@@ -46,7 +46,7 @@ function  toBinary(n) {
       n = Math.floor(n/2); //Assigning the dividend to be the quotient to be used later
     }
     document.getElementById('binOut').innerHTML = decimal.join("");
-    return decimal;
+    return decimal.join("");
 }
 //Converts Hexadecimal input into Decimal output
 function hexToDec(USERINPUT){
