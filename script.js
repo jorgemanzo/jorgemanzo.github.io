@@ -149,6 +149,9 @@ function hexToBin(USERINPUT){
       case "F":
         hex1.push('1111');
         break;
+      case "0":
+        hex1.push('0000');
+        break;
       default:
         hex1.push(toBinary(string[i]));
     }
@@ -180,9 +183,10 @@ function convert(USERINPUT){
 
 function twosComplement(n){
   let invert  = [];
-  let length = n.toString().length - 1;
+  let length = n.toString().length;
   let string = n.toString();
-  for(i = 0, j = length; j >= 0; i++, j--){
+  let i;
+  for(i = 0, i < length; i++){
     switch (string[i]) {
       case "0":
         invert.unshift('1'); //Append remainder to array
