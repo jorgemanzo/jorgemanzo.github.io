@@ -188,6 +188,7 @@ function twosComplement(n){
     console.log("Your number inverted:");
     console.log(invert.join(""));
 
+  }
 }
 
 function checkForSpecial(USERINPUT){
