@@ -34,9 +34,6 @@ function toHex(n) {
     document.getElementById('hexOut').innerHTML = hex.join("");
 }
 
-
-
-
 //Converts Decimal to binary output
 function  toBinary(n) {
     let temp;
@@ -150,6 +147,7 @@ function hexToBin(USERINPUT){
     }
 
     console.log(hex1.join(""));
+    return  hex1.join("");
   }
 }
 
@@ -175,10 +173,25 @@ function convert(USERINPUT){
 }
 
 function twosComplement(n){
+  let invert  = [];
+  let length = n.toString().length - 1;
+  let string = n.toString();
+  for(i = 0, j = length; j >= 0; i++, j--){
+    switch (string[i]) {
+      case "0":
+        invert.unshift('1'); //Append remainder to array
+        break;
+      default:
+        invert.unshift('0');
+        break
+    }
+    console.log("Your number inverted:");
+    console.log(invert.join(""));
 
 }
 
 function checkForSpecial(USERINPUT){
+  let n;
   if(document.getElementById("fromNeg").checked){
     //convert whatever input type to negative using two's complement
     if(document.getElementById("hex").checked){
@@ -191,8 +204,7 @@ function checkForSpecial(USERINPUT){
     else{
       n = USERINGPUT;
     }
-    //call n = twosComplement(n)
-    //call n  =
+    twosComplement(n)
   }
 }
 
