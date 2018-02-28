@@ -152,8 +152,30 @@ function hexToBin(USERINPUT){
       case "0":
         hex1.push('0000');
         break;
-      default:
-        hex1.push(toBinary(string[i]));
+      case "1":
+        hex1.push('0001');
+        break;
+      case "2":
+        hex1.push('0010');
+        break;
+      case "3":
+        hex1.push('0011');
+        break;
+      case "4":
+        hex1.push('0100');
+        break;
+      case "5":
+        hex1.push('0101');
+        break;
+      case "6":
+        hex1.push('0110');
+        break;
+      case "7":
+        hex1.push('0111');
+        break;
+      case "8":
+        hex1.push('1000');
+        break;
     }
   }
   console.log(hex1.join(""));
@@ -204,10 +226,6 @@ function twosComplement(n){
   //if it results in just 1, append that 1 in the ith location in the array thats all we need to do.
   for(i = length-1; i > 0; i--){
     carry = 1 + parseInt(invert[i]);
-    console.log("Carry is:");
-    console.log(carry);
-    console.log("i in addOne is:");
-    console.log(i);
     if(carry === 2){
       invert[i] = '0';
     }
