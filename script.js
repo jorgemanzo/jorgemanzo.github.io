@@ -121,7 +121,7 @@ function hexToBin(USERINPUT){
   let hex1   = [];
   let length = USERINPUT.toString().length - 1;
   let string = USERINPUT.toString();
-  for(i = 0, j = length; j >= 0; i++, j--){
+  for(i = 0; i < length; i++){
     switch (string[i]) {
       case "A":
         hex1.unshift('1010'); //Append remainder to array
