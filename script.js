@@ -142,8 +142,7 @@ function hexToBin(USERINPUT){
         hex1.unshift('1111'); //Append remainder to array
         break;
       default:
-        hex1.unshift(toBinary(string[i]))
-        break
+        hex1.unshift(toBinary(string[i]));
     }
 
     console.log(hex1.join(""));
@@ -183,7 +182,6 @@ function twosComplement(n){
         break;
       default:
         invert.unshift('0');
-        break
     }
   }
   console.log("Your number inverted:");
