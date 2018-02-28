@@ -3,6 +3,7 @@
 function toHex(n) {
     let temp;
     let hex = [];
+    let i;
     //If the input is Decimal, convert it to hex
     for(i = 0; n != 0; i++){
       temp = n % 16;
@@ -39,6 +40,7 @@ function  toBinary(n) {
     let temp;
     let decimal = [];
     let binary  = [];
+    let i;
     //if input is of type decimal
     for(i = 0; n != 0; i++){
       temp = n % 2; //Find remainder
@@ -53,6 +55,7 @@ function hexToDec(USERINPUT){
     let n = 0;
     let length = USERINPUT.toString().length - 1;
     let string = USERINPUT.toString();
+    let j, i;
     //For(i elements in userinput, multiply string[i] by 16^j)
     for(i = 0, j = length; i <= length && j >= 0; i++, j--){
       //case a-f = 10-15 which is then multiplied by 16^i
@@ -86,6 +89,7 @@ function hexToDec(USERINPUT){
 //helper function, counts the number of ' ' or '.' in binary input
 function counter(string, length){
   let n = 0 //be the number of periods or spaces in string
+  let i;
   for(i = 0; i < length; i++){
     if(string[i] === "." || string[i] === " "){n++;}
   }
@@ -98,6 +102,7 @@ function binToDec(USERINPUT){
     let n = 0;
     let length = USERINPUT.toString().length - 1;
     let string = USERINPUT.toString();
+    let i;
     length = length - counter(string, length);
     for(i = 0, j = length; j >= 0; i++, j--){
       switch (string[i]) {
@@ -121,33 +126,34 @@ function hexToBin(USERINPUT){
   let hex1   = [];
   let length = USERINPUT.toString().length - 1;
   let string = USERINPUT.toString();
+  let i;
   for(i = 0; i < length; i++){
+    console.log(string[i]);
     switch (string[i]) {
       case "A":
-        hex1.unshift('1010'); //Append remainder to array
+        hex1.push('1010');
         break;
       case "B":
-        hex1.unshift('1011'); //Append remainder to array
+        hex1.push('1011');
         break;
       case "C":
-        hex1.unshift('1100'); //Append remainder to array
+        hex1.push('1100');
         break;
       case "D":
-        hex1.unshift('1101'); //Append remainder to array
+        hex1.push('1101');
         break;
       case "E":
-        hex1.unshift('1110'); //Append remainder to array
+        hex1.push('1110');
         break;
       case "F":
-        hex1.unshift('1111'); //Append remainder to array
+        hex1.push('1111');
         break;
       default:
-        hex1.unshift(toBinary(string[i]));
+        hex1.push(toBinary(string[i]));
     }
-
-    console.log(hex1.join(""));
-    return  hex1.join("");
   }
+  console.log(hex1.join(""));
+  return  hex1.join("");
 }
 
 function output(n){
