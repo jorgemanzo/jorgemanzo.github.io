@@ -203,8 +203,7 @@ function twosComplement(n){
   //if it results in 2, append 0 to end of array, and append 1 in carry. Then call this proc again
   //if it results in just 1, append that 1 in the ith location in the array thats all we need to do.
   for(i = length; i > 0; i--){
-    carry = 1;
-    carry = carry + parseInt(invert[i]);
+    carry = 1 + parseInt(invert[i]);
     console.log("Carry is:");
     console.log(carry);
     if(carry === 2){
