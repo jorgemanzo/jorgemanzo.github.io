@@ -195,8 +195,26 @@ function twosComplement(n){
         invert.push('0');
     }
   }
-  console.log("Your number inverted:");
-  console.log(invert.join(""));
+  invert = invert.toString();
+  //addOne
+  //place 1 in carry
+  //add the last element of invert to carry;
+  //if it results in 2, append 0 to end of array, and append 1 in carry. Then call this proc again
+  //if it results in just 1, append that 1 in the ith location in the array thats all we need to do.
+  let carry;
+  for(i = length; i > 0; i--){
+    carry = 1;
+    carry = carry + invert[i];
+    if(carry === 2){
+      invert[i] = 0;
+    }
+    else if(carry === 1){
+      invert[i] = 1;
+      break;
+    }
+  }
+  console.log("Your number in Binary two's complement:");
+  console.log(invert);
 }
 
 function checkForSpecial(USERINPUT){
