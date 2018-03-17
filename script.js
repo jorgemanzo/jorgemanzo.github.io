@@ -241,7 +241,7 @@ function twosComplement(n){
   console.log("Your number in Binary two's complement:");
   console.log(invert.join(""));
 
-  n = binToDec(invert);
+  n = binToDec(invert.join(""));
   output(n);
 }
 
