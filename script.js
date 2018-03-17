@@ -109,6 +109,9 @@ function binToDec(USERINPUT){
         case "1":
           n = n + (1 * (Math.pow(2, j)  ) )
           break;
+        case "-":
+          j++;
+          break;
         case " ":
           j++;
           break;
