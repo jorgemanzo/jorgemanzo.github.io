@@ -271,6 +271,9 @@ function convertInput() {
     let  isValid;
     let  indicator; //Used to earmark the data for whether it is dec,hex,or bi
     checkForSpecial(USERINPUT);
-    convert(USERINPUT);
+
+    if(!(document.getElementById("fromNeg").check)){
+      convert(USERINPUT);
+    }
     return true;
 }
