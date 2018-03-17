@@ -242,7 +242,7 @@ function twosComplement(n){
   console.log(invert.join(""));
 
 
-  n = binToDec(parseInt((invert.join("")),10));
+  n = binToDec(invert.join(""));
   console.log(n);
   output(n);
 }
