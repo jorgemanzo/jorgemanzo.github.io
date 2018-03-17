@@ -265,18 +265,22 @@ function checkForSpecial(USERINPUT){
 }
 
 
+function hideMe(myId){
+  let visability = "none";
+  if(document.getElementById("fromNeg").checked){
+    visability = "block";
+  }
+  document.getElementById(myId).style.display = visability
+}
+
 function convertInput() {
     const   USERINPUT = document.getElementById("input").value;
     let  isValid;
     let  indicator; //Used to earmark the data for whether it is dec,hex,or bi
     let  visability;
     if(document.getElementById("fromNeg").checked){
-      visability = "block";
-      document.getElementById("dec").style.display = visability;
       checkForSpecial(USERINPUT);
     } else {
-      visability = "none";
-      document.getElementById("dec").style.display = visability;
       convert(USERINPUT);
     }
     return true;
