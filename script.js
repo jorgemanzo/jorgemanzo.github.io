@@ -269,7 +269,7 @@ function convertInput() {
     const   USERINPUT = document.getElementById("input").value;
     let  isValid;
     let  indicator; //Used to earmark the data for whether it is dec,hex,or bi
-    if(document.getElementById("fromNeg").check){
+    if(document.getElementById("fromNeg").checked){
       checkForSpecial(USERINPUT);
     } else {
       convert(USERINPUT);
