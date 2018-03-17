@@ -37,7 +37,7 @@
     <form>
       <div class="row">
           <div class="col-md-4">
-            <input type="radio" name="datatype" value="Decimal" id="dec"> Decimal
+            <input type="radio" name="datatype" value="Decimal" id="dec" style="display:none"> Decimal
           </div>
           <div class="col-md-4">
             <input type="radio" name="datatype" value="Hexadecimal" id="hex"> Hexadecimal
@@ -51,7 +51,7 @@
     <form>
       Your number to convert:<br>
       <input type="text" id="input"><br>
-      <input type="checkbox" id="fromNeg" > (NOT WORKING YET!) My input is negative, convert to positive!<br>
+      <input type="checkbox" id="fromNeg" >My input is negative, convert to positive! (Only for Hex or Binary!)<br>
       <button type="button" onclick="convertInput()">Convert!</button>
     </form>
 
