@@ -207,6 +207,7 @@ function convert(USERINPUT){
 }
 
 function twosComplement(n){
+  let note;
   let invert  = [];
   let length = n.toString().length;
   let string = n.toString();
@@ -239,6 +240,9 @@ function twosComplement(n){
   }
   console.log("Your number in Binary two's complement:");
   console.log(invert.join(""));
+
+  n = binToDec(invert);
+  output(n);
 }
 
 function checkForSpecial(USERINPUT){
