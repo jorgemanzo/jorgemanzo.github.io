@@ -249,20 +249,19 @@ function twosComplement(n){
 
 function checkForSpecial(USERINPUT){
   let n;
-  if(document.getElementById("fromNeg").checked){
-    //convert whatever input type to negative using two's complement
-    if(document.getElementById("hex").checked){
-      n = hexToBin(USERINPUT);
-    }
-
-    else if(document.getElementById("dec").checked){
-      n = toBinary(USERINPUT);
-    }
-    else{
-      n = USERINGPUT;
-    }
-    twosComplement(n)
+  //convert whatever input type to negative using two's complement
+  if(document.getElementById("hex").checked){
+    n = hexToBin(USERINPUT);
   }
+
+  else if(document.getElementById("dec").checked){
+    n = toBinary(USERINPUT);
+  }
+  else{
+    n = USERINGPUT;
+  }
+  twosComplement(n)
+
 }
 
 
@@ -270,9 +269,9 @@ function convertInput() {
     const   USERINPUT = document.getElementById("input").value;
     let  isValid;
     let  indicator; //Used to earmark the data for whether it is dec,hex,or bi
-    checkForSpecial(USERINPUT);
-
-    if(!(document.getElementById("fromNeg").check)){
+    if(document.getElementById("fromNeg").check){
+      checkForSpecial(USERINPUT);
+    } else {
       convert(USERINPUT);
     }
     return true;
