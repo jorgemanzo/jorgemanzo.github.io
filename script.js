@@ -266,9 +266,9 @@ function checkForSpecial(USERINPUT){
 
 
 function hideMe(myId){
-  let visability = "none";
+  let visability = "block";
   if(document.getElementById("fromNeg").checked){
-    visability = "block";
+    visability = "none";
   }
   document.getElementById(myId).style.display = visability
 }
