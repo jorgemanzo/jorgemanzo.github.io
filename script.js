@@ -260,7 +260,8 @@ function checkForSpecial(USERINPUT){
   else{
     n = USERINGPUT;
   }
-  twosComplement(n)
+  console.log(n);
+  twosComplement(n);
 
 }
 
