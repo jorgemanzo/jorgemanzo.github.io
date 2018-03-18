@@ -47,6 +47,10 @@ function  toBinary(n) {
       decimal.unshift(temp); //Append remainder to array
       n = Math.floor(n/2); //Assigning the dividend to be the quotient to be used later
     }
+    if(document.getElementById("fromNeg").checked){
+      decimal.unshift(0);
+      decimal.unshift(0);
+    }
     document.getElementById('binOut').innerHTML = decimal.join("");
     return decimal.join("");
 }
@@ -254,9 +258,6 @@ function checkForSpecial(USERINPUT){
     n = hexToBin(USERINPUT);
   }  else if(document.getElementById("dec").checked){
     n = toBinary(USERINPUT);
-    n.unshift(0);
-    n.unshift(0);
-    n = n.join("");
   } else {
     n = USERINPUT;
   }
