@@ -252,13 +252,13 @@ function checkForSpecial(USERINPUT){
   //convert whatever input type to negative using two's complement
   if(document.getElementById("hex").checked){
     n = hexToBin(USERINPUT);
-  }
-
-  else if(document.getElementById("dec").checked){
+  }  else if(document.getElementById("dec").checked){
     n = toBinary(USERINPUT);
-  }
-  else{
-    n = USERINGPUT;
+    n.unshift(0);
+    n.unshift(0);
+    n = n.join("");
+  } else {
+    n = USERINPUT;
   }
   console.log(n);
   twosComplement(n);
