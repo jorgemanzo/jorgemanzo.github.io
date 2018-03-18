@@ -25,61 +25,62 @@
 
   </head>
   <body>
+    <div class="container">
+      <h3 id="topBar">
+        Decimal to Hex, Binary, and more!
+      </h3>
+      <p>
+        A number converter because I hate doing this manually.<br>
+        Please select your input type.
+      </p>
 
-    <h3 id="topBar">
-      Decimal to Hex, Binary, and more!
-    </h3>
-    <p>
-      A number converter because I hate doing this manually.<br>
-      Please select your input type.
-    </p>
+      <form>
+        <div class="row">
+            <div class="col-md-4">
+              <input type="radio" name="datatype" value="Decimal" id="dec" > Decimal
+            </div>
+            <div class="col-md-4">
+              <input type="radio" name="datatype" value="Hexadecimal" id="hex"> Hexadecimal
+            </div>
+            <div class="col-md-4">
+              <input type="radio" name="datatype" value="Binary" id="bin"> Binary
+            </div>
+        </div>
+      </form>
 
-    <form>
-      <div class="row">
-          <div class="col-md-4">
-            <input type="radio" name="datatype" value="Decimal" id="dec" > Decimal
-          </div>
-          <div class="col-md-4">
-            <input type="radio" name="datatype" value="Hexadecimal" id="hex"> Hexadecimal
-          </div>
-          <div class="col-md-4">
-            <input type="radio" name="datatype" value="Binary" id="bin"> Binary
-          </div>
-      </div>
-    </form>
+      <form>
+        Your number to convert:<br>
+        <input type="text" id="input"><br>
+        <input type="checkbox" id="fromNeg" >My input is negative, convert it to its negative equivalents! (please leave out the '-' from a negative decimal)<br>
+        <button type="button" onclick="convertInput()">Convert!</button>
+      </form>
 
-    <form>
-      Your number to convert:<br>
-      <input type="text" id="input"><br>
-      <input type="checkbox" id="fromNeg" >My input is negative, convert it to its negative equivalents! (please leave out the '-' from a negative decimal)<br>
-      <button type="button" onclick="convertInput()">Convert!</button>
-    </form>
-
-    <table>
-      <tr>
-        <th>Type</th>
-        <th>Ouput</th>
-      </tr>
-      <tr>
-        <td>Decimal</td>
-        <td id="decOut">...</td>
-      </tr>
-      <tr>
-        <td>Binary</td>
-        <td id="binOut">...</td>
-      </tr>
-      <tr>
-        <td>Hexadecimal</td>
-        <td id="hexOut">...</td>
-      </tr>
-    </table>
+      <table>
+        <tr>
+          <th>Type</th>
+          <th>Ouput</th>
+        </tr>
+        <tr>
+          <td>Decimal</td>
+          <td id="decOut">...</td>
+        </tr>
+        <tr>
+          <td>Binary</td>
+          <td id="binOut">...</td>
+        </tr>
+        <tr>
+          <td>Hexadecimal</td>
+          <td id="hexOut">...</td>
+        </tr>
+      </table>
 
 
-    <h3>A note about negative numbers</h3>
-    <p>Because of how this app handles negative numbers, you need to ignore the output that matches the type of your input.<br>
-      For example, if you input a negative Decimal number, ignore the Decimal number in the Output as it will not be correct.<br>
-      If your input is a negative Hexadecimal, ignore the Hex output.<br><br>
-      This app will convert your input into binary, append two leading zeros, and then perform two's complement.</p>
+      <h3>A note about negative numbers</h3>
+      <p>Because of how this app handles negative numbers, you need to ignore the output that matches the type of your input.<br>
+        For example, if you input a negative Decimal number, ignore the Decimal number in the Output as it will not be correct.<br>
+        If your input is a negative Hexadecimal, ignore the Hex output.<br><br>
+        This app will convert your input into binary, append two leading zeros, and then perform two's complement.</p>
+    </div>
   </body>
 
 
