@@ -212,7 +212,7 @@ function convert(USERINPUT){
       else{
         n = parseInt(USERINPUT); //Convert user's decimal input into Binary
       }
-      output(n);
+      outputNeg(n);
 }
 
 function twosComplement(n){
