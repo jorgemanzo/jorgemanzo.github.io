@@ -195,6 +195,10 @@ function output(n){
     toHex(n);
 }
 
+function outputNeg(n){
+    document.getElementById('decOut').innerHTML = n;
+    toHex(n);
+}
 
 function convert(USERINPUT){
     let n;
@@ -203,6 +207,7 @@ function convert(USERINPUT){
       }
       else if(document.getElementById("bin").checked){
         n = binToDec(USERINPUT);
+        document.getElementById('binOut').innerHTML = n;
       }
       else{
         n = parseInt(USERINPUT); //Convert user's decimal input into Binary
