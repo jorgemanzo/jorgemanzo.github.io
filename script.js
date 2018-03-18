@@ -207,12 +207,11 @@ function convert(USERINPUT){
       }
       else if(document.getElementById("bin").checked){
         n = binToDec(USERINPUT);
-        document.getElementById('binOut').innerHTML = n;
       }
       else{
         n = parseInt(USERINPUT); //Convert user's decimal input into Binary
       }
-      outputNeg(n);
+      output(n);
 }
 
 function twosComplement(n){
@@ -250,10 +249,10 @@ function twosComplement(n){
   console.log("Your number in Binary two's complement:");
   console.log(invert.join(""));
 
-
+  document.getElementById('binOut').innerHTML = invert;
   n = binToDec(invert.join(""));
   console.log(n);
-  output(n);
+  outputNeg(n);
 }
 
 function checkForSpecial(USERINPUT){
