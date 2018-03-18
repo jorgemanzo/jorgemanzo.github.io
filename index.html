@@ -31,33 +31,53 @@
       </center>
     </h3>
     <div class="container-fluid">
-
-      <p>
-        A number converter because I hate doing this manually.<br>
-        Please select your input type.
-      </p>
-
+      <center>
+        <p>
+          A number converter because I hate doing this manually.<br>
+          Please select your input type.
+        </p>
+      </cemter>
+      <center>
       <form>
         <div class="row">
             <div class="col-md-4">
-              <input type="radio" name="datatype" value="Decimal" id="dec" > Decimal
+              <div class="radio">
+                <label>
+                  <input type="radio" name="datatype" value="Decimal" id="dec"> Decimal
+                </label>
+              </div>
             </div>
             <div class="col-md-4">
-              <input type="radio" name="datatype" value="Hexadecimal" id="hex"> Hexadecimal
+              <div class="radio">
+                <label>
+                  <input type="radio" name="datatype" value="Hexadecimal" id="hex"> Hexadecimal
+                </label>
+              </div>
             </div>
             <div class="col-md-4">
-              <input type="radio" name="datatype" value="Binary" id="bin"> Binary
+              <div class="radio">
+                <label>
+                  <input type="radio" name="datatype" value="Binary" id="bin"> Binary
+                </label>
+              </div>
             </div>
         </div>
       </form>
+      </cemter>
 
+      <center>
       <form>
         Your number to convert:<br>
         <input type="text" id="input"><br>
-        <input type="checkbox" id="fromNeg" >My input is negative, convert it to its negative equivalents! (please leave out the '-' from a negative decimal)<br>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="fromNeg" >My input is negative, convert it to its negative equivalents! (please leave out the '-' from a negative decimal)<br>
+          </label>
+        </div>
         <button type="button" onclick="convertInput()">Convert!</button>
       </form>
-
+      </cemter>
+      
       <table>
         <tr>
           <th>Type</th>
