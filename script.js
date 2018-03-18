@@ -249,7 +249,7 @@ function twosComplement(n){
   console.log("Your number in Binary two's complement:");
   console.log(invert.join(""));
 
-  document.getElementById('binOut').innerHTML = invert;
+  document.getElementById('binOut').innerHTML = invert.join("");
   n = binToDec(invert.join(""));
   console.log(n);
   outputNeg(n);
