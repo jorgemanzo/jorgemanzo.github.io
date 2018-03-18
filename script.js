@@ -195,6 +195,10 @@ function output(n){
     toHex(n);
 }
 
+function outputNeg(n){
+    document.getElementById('decOut').innerHTML = n;
+    toHex(n);
+}
 
 function convert(USERINPUT){
     let n;
@@ -245,15 +249,14 @@ function twosComplement(n){
   console.log("Your number in Binary two's complement:");
   console.log(invert.join(""));
 
-  document.getElementById('binOut').innerHTML = invert.join("");
+  document.getElementById('binOut').innerHTML = invert.join();
   n = binToDec(invert.join(""));
   console.log(n);
-  toHex(n);
+  outputNeg(n);
 }
 
 function checkForSpecial(USERINPUT){
   let n;
-  document.getElementById('decOut').innerHTML = USERINPUT;
   //convert whatever input type to negative using two's complement
   if(document.getElementById("hex").checked){
     n = hexToBin(USERINPUT);
