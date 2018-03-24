@@ -1,5 +1,4 @@
-
-//convets Decimal input to Hexadecimal output
+//convets Decimal input to Hexadecimal  and returns output
 function toHex(n) {
     let temp;
     let hex = [];
@@ -32,7 +31,7 @@ function toHex(n) {
           hex.unshift(temp);
       }
     }
-    document.getElementById('hexOut').innerHTML = hex.join("");
+    return hex.join("");
 }
 
 //Converts Decimal to binary output
@@ -99,7 +98,6 @@ function counter(string, length){
   }
   return n;
 }
-
 
 //Converts binary input to Decimal output
 function binToDec(USERINPUT){
@@ -189,31 +187,6 @@ function hexToBin(USERINPUT){
   return  hex1.join("");
 }
 
-function output(n){
-    document.getElementById('decOut').innerHTML = n;
-    toBinary(n);
-    toHex(n);
-}
-
-function outputNeg(n){
-    document.getElementById('decOut').innerHTML = n;
-    toHex(n);
-}
-
-function convert(USERINPUT){
-    let n;
-      if(document.getElementById("hex").checked){
-        n = hexToDec(USERINPUT);
-      }
-      else if(document.getElementById("bin").checked){
-        n = binToDec(USERINPUT);
-      }
-      else{
-        n = parseInt(USERINPUT); //Convert user's decimal input into Binary
-      }
-      output(n);
-}
-
 function twosComplement(n){
   let note;
   let invert  = [];
@@ -224,18 +197,13 @@ function twosComplement(n){
   for(i = 0; i < length; i++){
     switch (string[i]) {
       case "0":
-        invert.push('1'); //Append remainder to array
+        invert.push('1');
         break;
       default:
         invert.push('0');
     }
   }
-  //invert = invert.toString();
-  //addOne
-  //place 1 in carry
-  //add the last element of invert to carry;
-  //if it results in 2, append 0 to end of array, and append 1 in carry. Then call this proc again
-  //if it results in just 1, append that 1 in the ith location in the array thats all we need to do.
+
   for(i = length-1; i > 0; i--){
     carry = 1 + parseInt(invert[i]);
     if(carry === 2){
@@ -248,37 +216,48 @@ function twosComplement(n){
   }
   console.log("Your number in Binary two's complement:");
   console.log(invert.join(""));
-
-  document.getElementById('binOut').innerHTML = invert.join("");
-  n = binToDec(invert.join(""));
-  console.log(n);
-  outputNeg(n);
+  return invert.join("");
 }
-
-function checkForSpecial(USERINPUT){
-  let n;
-  //convert whatever input type to negative using two's complement
-  if(document.getElementById("hex").checked){
-    n = hexToBin(USERINPUT);
-  }  else if(document.getElementById("dec").checked){
-    n = toBinary(USERINPUT);
-  } else {
-    n = USERINPUT;
-  }
-  console.log(n);
-  twosComplement(n);
-
-}
-
 
 function convertInput() {
     const   USERINPUT = document.getElementById("input").value;
-    let  isValid;
-    let  indicator; //Used to earmark the data for whether it is dec,hex,or bi
     if(document.getElementById("fromNeg").checked){
-      checkForSpecial(USERINPUT);
+      let n = 0;
+      let complemented = 0;
+      if(document.getElementById('hex').checked){
+        n = hexToBin(USERINPUT);
+        complemented = twosComplement(n);
+        document.getElementById('decOut').innerHTML = binToDec(complemented);
+        document.getElementById('binOut').innerHTML = complemented;
+        document.getElementById('hexOut').innerHTML = USERINPUT;
+      } else if(document.getElementById('dec').checked){
+        n = toBinary(USERINPUT);
+        complemented = twosComplement(n);
+        document.getElementById('decOut').innerHTML = USERINPUT;
+        document.getElementById('binOut').innerHTML = complemented;
+        document.getElementById('hexOut').innerHTML = toHex(binToDec(complemented));
+      } else {
+        n = USERINPUT;
+        complemented = twosComplement(n);
+        document.getElementById('decOut').innerHTML = binToDec(complemented);
+        document.getElementById('binOut').innerHTML = USERINPUT;
+        document.getElementById('hexOut').innerHTML = toHex(binToDec(complemented));
+      }
+
     } else {
-      convert(USERINPUT);
+      let n = 0;
+      if(document.getElementById("hex").checked){
+        n = hexToDec(USERINPUT);
+      }
+      else if(document.getElementById("bin").checked){
+        n = binToDec(USERINPUT);
+      }
+      else{
+        n = parseInt(USERINPUT);
+      }
+      document.getElementById('decOut').innerHTML = n;
+      document.getElementById('binOut').innerHTML = toBinary(n);
+      document.getElementById('hexOut').innerHTML = toHex(n);
     }
     return true;
 }
