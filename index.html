@@ -40,7 +40,7 @@
           A number converter because I hate doing this manually.<br>
           Please select your input type.
         </p>
-      </cemter>
+      </center>
       <center>
         <form>
           <div class="row">
@@ -67,49 +67,55 @@
               </div>
           </div>
         </form>
-      </cemter>
+      </center>
 
       <center>
-      <form>
-        Your number to convert:<br>
-        <input type="text" id="input"><br>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" id="fromNeg" >My input is negative, convert it to its negative equivalents! (please leave out the '-' from a negative decimal)<br>
-          </label>
-        </div>
-        <button class="btn btn-default" type="button"  id="convertButton">Convert</button>
-      </form>
-      </cemter>
-
-      <table>
-        <tr>
-          <th>Type</th>
-          <th>Ouput</th>
-        </tr>
-        <tr>
-          <td>Decimal</td>
-          <td id="decOut">...</td>
-        </tr>
-        <tr>
-          <td>Binary</td>
-          <td id="binOut">...</td>
-        </tr>
-        <tr>
-          <td>Hexadecimal</td>
-          <td id="hexOut">...</td>
-        </tr>
-      </table>
-
-
-      <h3>A Note About Negative Numbers</h3>
-      <p>This app will convert your negative input into raw binary. Then it will perform two's complement on your <br>
-        binary. Then this complemented binary is written as output. Another note, if your negative input is Hexadecimal,<br>
-        for example, then in the Hexadecimal output we just copy and paste your input into output.</p>
+        <form id="inputForm">
+          Your number to convert:<br>
+          <input type="text" id="input"><br>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="fromNeg" >My input is negative, convert it to its negative equivalents! (please leave out the '-' from a negative decimal)<br>
+            </label>
+          </div>
+          <button class="btn btn-default" type="button"  id="convertButton">Convert</button>
+        </form>
+      </center>
+      <center
+        <table>
+          <tr>
+            <th>Type</th>
+            <th>Ouput</th>
+          </tr>
+          <tr>
+            <td>Decimal</td>
+            <td id="decOut">...</td>
+          </tr>
+          <tr>
+            <td>Binary</td>
+            <td id="binOut">...</td>
+          </tr>
+          <tr>
+            <td>Hexadecimal</td>
+            <td id="hexOut">...</td>
+          </tr>
+        </table>
+        <h3>
+          A Note About Negative Numbers
+        </h3>
+        <p>This app will convert your negative input into raw binary. Then it will perform two's complement on your <br>
+          binary. Then this complemented binary is written as output. Another note, if your negative input is Hexadecimal,<br>
+          for example, then in the Hexadecimal output we just copy and paste your input into output.
+        </p>
         <br>
-      <h3>A Note About Output Binary from Negative Numbers.</h3>
-      <p>Remember, this app converts your input into binary, and then performs two's complement on that binary.<br>
-        Unless you give us negative binary, we will be writing as output the two's complement of your Binary.</p>
+        <h3>
+          A Note About Output Binary from Negative Numbers.
+        </h3>
+        <p>
+          Remember, this app converts your input into binary, and then performs two's complement on that binary.<br>
+          Unless you give us negative binary, we will be writing as output the two's complement of your Binary.
+        </p>
+      </center>
     </div>
   </body>
 
