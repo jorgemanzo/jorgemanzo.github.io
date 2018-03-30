@@ -50,7 +50,6 @@ export function  toBinary(n) {
       decimal.unshift(0);
       decimal.unshift(0);
     }
-    document.getElementById('binOut').innerHTML = decimal.join("");
     return decimal.join("");
 }
 //Converts Hexadecimal input into Decimal output
