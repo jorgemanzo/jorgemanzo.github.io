@@ -1,5 +1,6 @@
 import * as converter from './script.js';
-function convertInput() {
+function convertInput(e) {
+    e.preventDefault();
     const   USERINPUT = document.getElementById("input").value;
     if(document.getElementById("fromNeg").checked){
       let n = 0;
@@ -43,4 +44,4 @@ function convertInput() {
     return true;
 }
 
-document.getElementById('convertButton').addEventListener('click', convertInput);
+document.getElementById('inputForm').addEventListener('submit', convertInput);
