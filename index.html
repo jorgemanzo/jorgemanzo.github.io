@@ -3,17 +3,17 @@
 
   <head>
 
-    <meta name="theme-color" content="#2d62b7" />
+    <meta name="theme-color" content="#2d62b7">
 
     <link rel="icon" sizes="192x192" href="https://i.imgur.com/BYQ69AD.png">
 
-    <script src="index.js" type="module"></script>
+
 
     <meta charset="utf-8">
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="alt stylesheet" type="text/css" href="myStyle.css">
+    <link rel="alt stylesheet" type="text/css" href="/myStyle.90df57f3.css">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -27,8 +27,8 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-  </head>
-  <body >
+  <script src="/myStyle.90df57f3.js"></script></head>
+  <body>
     <h3 id="topBar">
       <center>
         Decimal to Hex, Binary, and more!
@@ -41,84 +41,38 @@
           Please select your input type.
         </p>
       </center>
+      <div id="target-div">
+        <app>
+        </app>
+      </div>
       <center>
-        <form>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="radio">
-                <label>
-                  <input type="radio" name="datatype" value="Decimal" id="dec"> Decimal
-                </label>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="radio">
-                <label>
-                  <input type="radio" name="datatype" value="Hexadecimal" id="hex"> Hexadecimal
-                </label>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="radio">
-                <label>
-                  <input type="radio" name="datatype" value="Binary" id="bin"> Binary
-                </label>
-              </div>
-            </div>
-          </div>
-        </form>
-      </center>
-
-      <center>
-        <form id="inputForm">
-          Your number to convert:<br>
-          <input type="text" id="input"><br>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" id="fromNeg" >My input is negative, convert it to its negative equivalents! (please leave out the '-' from a negative decimal)<br>
-            </label>
-          </div>
-          <button class="btn btn-default" type="submit"  id="convertButton">Convert</button>
-        </form>
-      </center>
-      <center>
-        <table>
-          <tr>
-            <th>Type</th>
-            <th>Ouput</th>
-          </tr>
-          <tr>
-            <td>Decimal</td>
-            <td id="decOut">...</td>
-          </tr>
-          <tr>
-            <td>Binary</td>
-            <td id="binOut">...</td>
-          </tr>
-          <tr>
-            <td>Hexadecimal</td>
-            <td id="hexOut">...</td>
-          </tr>
-        </table>
-        <h3>
-          A Note About Negative Numbers
-        </h3>
-        <p>This app will convert your negative input into raw binary. Then it will perform two's complement on your <br>
-          binary. Then this complemented binary is written as output. Another note, if your negative input is Hexadecimal,<br>
-          for example, then in the Hexadecimal output we just copy and paste your input into output.
-        </p>
-        <br>
-        <h3>
-          A Note About Output Binary from Negative Numbers.
-        </h3>
-        <p>
-          Remember, this app converts your input into binary, and then performs two's complement on that binary.<br>
-          Unless you give us negative binary, we will be writing as output the two's complement of your Binary.
-        </p>
+        <div class="lower-info">
+          <h3>
+            A Note About Negative Numbers
+          </h3>
+          <p>This app will convert your negative input into raw binary. Then it will perform two's complement on your <br>
+            binary. Then this complemented binary is written as output. Another note, if your negative input is Hexadecimal,<br>
+            for example, then in the Hexadecimal output we just copy and paste your input into output.
+          </p>
+          <br>
+          <h3>
+            A Note About Output Binary from Negative Numbers.
+          </h3>
+          <p>
+            Remember, this app converts your input into binary, and then performs two's complement on that binary.<br>
+            Unless you give us negative binary, we will be writing as output the two's complement of your Binary.
+          </p>
+        </div>
       </center>
     </div>
+    <div class="source-footer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" height="30" width="30">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/CSS.3.svg/2000px-CSS.3.svg.png" height="30" width="22">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Badge_js-strict.svg/2000px-Badge_js-strict.svg.png" height="30" width="22">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Boostrap_logo.svg/1200px-Boostrap_logo.svg.png" height="20" width="20">
+      <img src="https://vuejs.org/images/logo.png" height="25" width="25">
+      <p class="footer-text">Things I have worked with so far!</p>
+    </div>
+    <script src="/conversionCalc.c3b863f7.js" type="module"></script>
   </body>
-
-
-
 </html>

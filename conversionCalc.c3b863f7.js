@@ -77,7 +77,7 @@ parcelRequire = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({6:[function(require,module,exports) {
+})({13:[function(require,module,exports) {
 var global = (1,eval)("this");
 'use strict';
 
@@ -7358,7 +7358,7 @@ if (inBrowser) {
 /*  */
 
 exports.default = Vue;
-},{}],7:[function(require,module,exports) {
+},{}],19:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7592,7 +7592,7 @@ function twosComplement(n) {
   console.log(invert.join(""));
   return invert.join("");
 }
-},{}],10:[function(require,module,exports) {
+},{}],21:[function(require,module,exports) {
 var Vue // late bind
 var version
 var map = (window.__VUE_HOT_MAP__ = Object.create(null))
@@ -7834,7 +7834,7 @@ exports.reload = tryWrap(function (id, options) {
   })
 })
 
-},{}],8:[function(require,module,exports) {
+},{}],22:[function(require,module,exports) {
 var global = (1,eval)("this");
 'use strict';
 
@@ -15115,7 +15115,7 @@ if (inBrowser) {
 /*  */
 
 exports.default = Vue;
-},{}],5:[function(require,module,exports) {
+},{}],11:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15239,13 +15239,13 @@ exports.default = {
     }
   }
 };
-      var $7323f7 = exports.default || module.exports;
-      if (typeof $7323f7 === 'function') {
-        $7323f7 = $7323f7.options;
+      var $ef08ef = exports.default || module.exports;
+      if (typeof $ef08ef === 'function') {
+        $ef08ef = $ef08ef.options;
       }
     
         /* template */
-        Object.assign($7323f7, (function () {
+        Object.assign($ef08ef, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -15496,16 +15496,16 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$7323f7', $7323f7);
+            api.createRecord('$ef08ef', $ef08ef);
           } else {
-            api.reload('$7323f7', $7323f7);
+            api.reload('$ef08ef', $ef08ef);
           }
         }
 
         
       }
     })();
-},{"./script.js":7,"vue-hot-reload-api":10,"vue":8}],3:[function(require,module,exports) {
+},{"./script.js":19,"vue-hot-reload-api":21,"vue":22}],6:[function(require,module,exports) {
 'use strict';
 
 var _Vue = require('Vue');
@@ -15573,7 +15573,7 @@ function convertInput(e) {
 
 document.getElementById('inputForm').addEventListener('submit', convertInput);
 */
-},{"Vue":6,"./app.vue":5}],11:[function(require,module,exports) {
+},{"Vue":13,"./app.vue":11}],25:[function(require,module,exports) {
 
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -15603,7 +15603,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '52640' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '52814' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -15742,5 +15742,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[11,3])
-//# sourceMappingURL=/jorgemanzo.github.io.b65223d3.map
+},{}]},{},[25,6])
+//# sourceMappingURL=/conversionCalc.c3b863f7.map
